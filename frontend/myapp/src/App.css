@@ -1,0 +1,78 @@
+/* App.css */
+.app {
+  min-height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.form-container {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.form-container input,
+.form-container select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.form-container button {
+  width: 100%;
+  padding: 12px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.switch-btn {
+  background: none !important;
+  color: #4CAF50 !important;
+  text-decoration: underline;
+}
+
+.navbar {
+  background-color: #333;
+  color: white;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar button {
+  padding: 8px 16px;
+  background-color: #d32f2f;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.navbar button:hover {
+  background-color: #b71c1c;
+}

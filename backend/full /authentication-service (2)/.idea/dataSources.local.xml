@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal" created-in="IU-243.22562.218">
+    <data-source name="bms@localhost" uuid="683c1ce4-6e8b-42e2-8a63-7b04d3d86d13">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" />
+      <user-name>postgres</user-name>
+      <schema-mapping />
+    </data-source>
+    <data-source name="case@localhost" uuid="e1bca8b3-0f7e-45a5-b040-4ec3c105cbaf">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" />
+      <user-name>postgres</user-name>
+      <schema-mapping />
+    </data-source>
+  </component>
+</project>

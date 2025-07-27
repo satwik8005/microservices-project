@@ -1,0 +1,49 @@
+# application.yml
+spring:
+  application:
+    name: API-GATEWAY
+  cloud:
+    gateway:
+      default-filters:
+        - DedupeResponseHeader=Access-Control-Allow-Origin
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "http://localhost:3000"
+            allowedMethods:
+              - GET
+              - POST
+              - PUT
+              - DELETE
+              - OPTIONS
+            allowedHeaders: "*"
+            allowCredentials: true
+      routes:
+        - id: authentication-service
+          uri: lb://AUTHENTICATION-SERVICE
+          predicates:
+            - Path=/auth-service/**
+          filters:
+            - StripPrefix=1
+
+        - id: request-service
+          uri: lb://REQUEST-SERVICE
+          predicates:
+            - Path=/api/seat-request/**
+          filters:
+            - AuthenticationFilter
+
+        - id: approval-service
+          uri: lb://APPROVAL-SERVICE
+          predicates:
+            - Path=/api/seat-approval/**
+          filters:
+            - AuthenticationFilter
+
+server:
+  port: 8080
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
